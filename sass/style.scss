@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: #7495E2;
+}
+
+.butons__container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+
+    .button {
+        font-size: 62px;
+        color: #EFD25D;
+        transition: .4s;
+        border: solid 4px #fff;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button>.fas:hover {
+        animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+        transform: translate3d(0, 0, 0) scale(1.5);
+        backface-visibility: hidden;
+        perspective: 1000px;
+        cursor: pointer;
+        /*transform: scale(1.5);*/
+    }
+}
+
+.restart {
+    padding: 5px 15px;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: solid 4px #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.restart:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #7495E2;
+}
+
+.game-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    margin-top: 50px;
+    color: white;
+}
+
+.game-messages>* {
+    margin-top: 20px;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(0, -3px, 0) scale(1.2);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(0, 3px, 0) scale(1.2);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(0, -10px, 0) scale(1.5);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(0, 10px, 0) scale(1.5);
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .butons__container {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+
+
+        .button {
+            margin-top: 30px;
+            height: 70px;
+            width: 70px;
+            border: solid 2px #fff;
+            font-size: 30px;
+        }
+    }
+
+    .restart {
+        border: solid 2px #fff;
+    }
+
+    .game-messages {
+        margin-top: 20px;
+    }
+}
